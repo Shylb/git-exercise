@@ -1,8 +1,10 @@
 <template>
-  <div>Home</div>
+  <div>Home count: {{count}}</div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   data () {
     return {
@@ -11,6 +13,9 @@ export default {
   },
   components: {
 
+  },
+  computed: {
+    ...mapState(['count'])
   },
   mounted() {
 

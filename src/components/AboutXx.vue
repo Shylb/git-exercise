@@ -1,8 +1,9 @@
 <template>
-  <div>I am About</div>
+  <div>I am About   count: {{count}}</div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   data () {
     return {
@@ -12,8 +13,11 @@ export default {
   components: {
 
   },
+  computed: {
+    ...mapState(['count'])
+  },
   mounted() {
-
+    console.log(this.count);
   },
   methods: {
 
